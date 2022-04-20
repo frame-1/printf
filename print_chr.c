@@ -1,17 +1,13 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
- * print_c - A function that prints a char
- * @c: character to print
- * Return: Always 1 (Success)
+ * print_c - prints a character
+ * @args: args
+ * Return: 1 which is 1 character printed
  */
 
-int print_c(va_list arguments, char *buf, unsigned int ibuf)
+int print_c(va_list args)
 {
-	char c;
-
-	c = va_arg(arguments, int);
-	handl_buf(buf, c, ibuf);
-
+	_putchar(va_arg(args, int));
 	return (1);
 }
